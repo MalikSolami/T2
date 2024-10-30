@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع مؤقت</title>
+	<style>
+        /* تنسيق لتوسيط النص */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* تنسيق رقم العداد */
+        #visitorCount {
+            font-size: 2em; /* حجم الخط كبير */
+            font-weight: bold; /* خط عريض */
+            color: #333; /* لون غامق */
+        }
+    </style>
+</head>
+<body>
+    <!-- إضافة GIF في أعلى الصفحة -->
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamZuejh1dGcyYzAzMHhuOXNpNm83ZWh3cmp3Zm1jazd4MXk4bHg2MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6r9moxvptqQjzrt7Cp/giphy.gif" alt="HI MY LOVE GIF" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+
+    <h1>هلا بالصيدة ❤!</h1>
+    <p>عددالضحايا: <span id="visitorCount">0</span></p>
+
+    <script>
+        // جلب عدد الزيارات من localStorage
+        let visitorCount = localStorage.getItem("visitorCount") || 0;
+        visitorCount++;
+        localStorage.setItem("visitorCount", visitorCount);
+        document.getElementById("visitorCount").innerText = visitorCount;
+    </script>
+</body>
+</html>
